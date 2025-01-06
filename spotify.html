@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Spotify Clone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="spotify.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img alt="Spotify logo" src="https://storage.googleapis.com/a1aa/image/3LiTHF55Mk66C1KLCzlGPBKjltDvmb2FJeglwSRwdiK2crAKA.jpg" />
+            <button class="toggle-button" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-home"></i>
+            <a href="#">Home</a>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-search"></i>
+            <a href="#">Search</a>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-book"></i>
+            <a href="#">Your Library</a>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-plus-square"></i>
+            <a href="#">Create Playlist</a>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-heart"></i>
+            <a href="#">Liked Songs</a>
+        </div>
+    </div>
+    <div class="expanded-card" id="expanded-card">
+        <div class="expanded-card-content">
+            <span class="close-btn" onclick="closeCard()">&times;</span>
+            <div class="expanded-card-inner">
+                <!-- Image Section -->
+                <div class="expanded-card-left">
+                    <img id="expanded-img" src="" alt="Expanded Playlist Image" />
+                </div>
+                <!-- Content Section (Title, Description, Buttons) -->
+                <div class="expanded-card-right">
+                    <h2 id="expanded-title">Expanded Playlist Title</h2>
+                    <p id="expanded-description">Playlist 1 Is here</p>
+                    <div class="expanded-card-buttons">
+                        <button class="play-btn" ><i class="fas fa-play"></i>Play</button>
+                        <button class="more-btn"><i class="fas fa-bars"></i>More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="main-content">
+        <h1>Good Evening</h1>
+        <div class="playlist">
+            <div class="playlist-item" onclick="expandCard('Playlist 1', 'https://storage.googleapis.com/a1aa/image/wkQL9bvuXILiNZ6oPfmiBEHXhjmP335XyGGe8y2UWFVA6WBUA.jpg', 'Album cover with abstract art in vibrant colors')">
+                <img alt="Album cover with abstract art in vibrant colors" height="200" src="https://storage.googleapis.com/a1aa/image/wkQL9bvuXILiNZ6oPfmiBEHXhjmP335XyGGe8y2UWFVA6WBUA.jpg" width="200" />
+                <p>Playlist 1</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https://storage.googleapis.com/a1aa/image/3AlCGECz3eVtfUsqYWN9p3tinbWphKLHHxY6ORluvgwz5WBUA.jpg', 'Album cover with a black and white photo of a band')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/3AlCGECz3eVtfUsqYWN9p3tinbWphKLHHxY6ORluvgwz5WBUA.jpg" width="200" />
+                <p>Playlist 2</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https:https:https://storage.googleapis.com/a1aa/image/h4Odsh4VRo7sBlo8F9f46esMosQpKWhffUQ9ULsKFhfVN3KgC.jpg', 'This is a description of Playlist 3')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/h4Odsh4VRo7sBlo8F9f46esMosQpKWhffUQ9ULsKFhfVN3KgC.jpg" width="200" />
+                <p>Playlist 3</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https:https://storage.googleapis.com/a1aa/image/ibcH3x001K7tDN4e9rzMfGQGOb2AMJf0gvxA7YuCcU3bztCoA.jpg', 'This is a description of Playlist 4')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/ibcH3x001K7tDN4e9rzMfGQGOb2AMJf0gvxA7YuCcU3bztCoA.jpg" width="200" />
+                <p>Playlist 4</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https://storage.googleapis.com/a1aa/image/PB2QrOA9WsLvE91ZhiJq9N9vDhy9MWojZa7P3TvzrnbcuVAF.jpg', 'This is a description of Playlist 2')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/PB2QrOA9WsLvE91ZhiJq9N9vDhy9MWojZa7P3TvzrnbcuVAF.jpg" width="200" />
+                <p>Playlist 5</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https://storage.googleapis.com/a1aa/image/cMffwbejIFEH6pk4IUmIdyURTmaHoR0fWuWI0TY3n9zZnbFQB.jpg', 'This is a description of Playlist 2')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/cMffwbejIFEH6pk4IUmIdyURTmaHoR0fWuWI0TY3n9zZnbFQB.jpg" width="200" />
+                <p>Playlist 6</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 2', 'https://storage.googleapis.com/a1aa/image/pJdzLMVEeY32YquWfjO2fFJwfMsbggKIa1j1m5VF4ts5nbFQB.jpg', 'This is a description of Playlist 2')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/pJdzLMVEeY32YquWfjO2fFJwfMsbggKIa1j1m5VF4ts5nbFQB.jpg" width="200" />
+                <p>Playlist 7</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 8', 'https://storage.googleapis.com/a1aa/image/PVPcY7sBHsLSNFMwB3VNjSJOgHnfox9sVMfzUkJh7Dh45WBUA.jpg', 'Album cover with a colorful abstract painting')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/PVPcY7sBHsLSNFMwB3VNjSJOgHnfox9sVMfzUkJh7Dh45WBUA.jpg" width="200" />
+                <p>Playlist 8</p>
+            </div>
+            <div class="playlist-item" onclick="expandCard('Playlist 9', 'https://storage.googleapis.com/a1aa/image/R3fH0ajetBrMqkIEJMXKefSlC5N2twuYuvxepqLcmHXkP3KgC.jpg', 'Album cover with a colorful graffiti art')">
+                <img alt="Album cover with a black and white photo of a band" height="200" src="https://storage.googleapis.com/a1aa/image/R3fH0ajetBrMqkIEJMXKefSlC5N2twuYuvxepqLcmHXkP3KgC.jpg" width="200" />
+                <p>Playlist 9</p>
+            </div>
+            <!-- Add descriptions for all other playlists in a similar way -->
+            
+            <!-- Add more playlists here -->
+        </div>
+    </div>
+
+    <div class="expanded-card" id="expanded-card">
+        <div class="expanded-card-content">
+            <span class="close-btn" onclick="closeCard()">&times;</span>
+            <img id="expanded-img" src="" alt="Expanded Playlist Image" />
+            <p id="expanded-title">Expanded Playlist Title</p>
+        </div>
+    </div>
+<script src="spotify.js"></script>
+</body>
+</html>
